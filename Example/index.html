@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Textarea Height Resizer Example</title>
+    <script src="../textarea-resizer.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      textarea {
+        display: block;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 15px auto;
+        padding: 0.25em;
+        resize: none;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea></textarea>
+    <script>
+      window.onload = (event) => {
+        // Query textarea element
+        var textarea = document.querySelector('textarea');
+        
+        // Add event listener to textarea
+        textarea.addEventListener('input', (e) => {
+          resizeTextareaHeight(e.target);
+        });
+        
+        // Call resizeTextareaHeight()
+        resizeTextareaHeight(textarea);
+      }
+    </script>
+  </body>
+</html>
